@@ -2,12 +2,8 @@ package com.aryan1403.UI;
 
 import java.util.Iterator;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JScrollPane;
 import javax.swing.JTabbedPane;
-import javax.swing.JTextArea;
-
 import com.aryan1403.DB.mongo;
 import com.aryan1403.Helpers.Product;
 import com.aryan1403.Merchandise.supplier;
@@ -18,18 +14,19 @@ import org.bson.Document;
  * UI for the Application
 */
 public class UI {
-    JFrame frame;
+    public static JFrame frame;
+    public static JPanel mainpanel;
 
-    private final int frameX = 1000;
-    private final int frameY = 700;
+    public final static int frameX = 1000;
+    public final static int frameY = 700;
 
-    private int cardX = 30;
-    private int cardY = 100;
+    public static int cardX = 30;
+    public static int cardY = 100;
 
     public UI() {
         // addProduct();
 
-        JPanel mainpanel = new JPanel();
+        mainpanel = new JPanel();
         mainpanel.setBounds(0, 0, frameX - 150, frameY - 300);
         // Iterator object of type Documents
         Iterator<Document> it = new mongo().retreive().iterator();
@@ -49,7 +46,7 @@ public class UI {
         JTabbedPane pane = new JTabbedPane();
         pane.setBounds(20, 30, frameX, frameY);
         pane.addTab("Products", mainpanel);
-        pane.addTab("meow", new JTextArea(300, 200));
+        pane.addTab("Supplier", new sPanel());
 
         frame = new JFrame();
         frame.setSize(frameX, frameY);
