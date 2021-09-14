@@ -11,6 +11,7 @@ import lombok.ToString;
 @ToString
 @Getter
 @Setter
+// POJO
 public class supplier {
     String productName;
     String productID;
