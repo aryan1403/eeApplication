@@ -2,14 +2,12 @@ package com.aryan1403.UI;
 
 import java.awt.Color;
 import java.awt.Font;
-
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
-
 import com.aryan1403.Helpers.Product;
 import com.aryan1403.Merchandise.supplier;
 

@@ -44,7 +44,7 @@ public class UI {
 
         // Added Panes
         JTabbedPane pane = new JTabbedPane();
-        pane.setBounds(20, 30, frameX, frameY);
+        pane.setBounds(20, 30, frameX - 50, frameY - 120);
         pane.addTab("Products", mainpanel);
         pane.addTab("Supplier", new sPanel());
 
