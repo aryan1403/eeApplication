@@ -8,6 +8,10 @@ import com.aryan1403.Helpers.Product;
 import com.aryan1403.Merchandise.supplier;
 import org.bson.Document;
 
+/*
+ * Developer : Aaryan
+ * UI for the Application
+*/
 public class UI {
     JFrame frame;
 
@@ -16,16 +20,23 @@ public class UI {
 
     private int cardX = 100;
     private int cardY = 100;
+
     public UI() {
-        addProduct();
+        // addProduct();
 
         JPanel mainpanel = new JPanel();
         mainpanel.setBounds(0, 0, frameX, frameY);
+        // Iterator object of type Documents
         Iterator<Document> it = new mongo().retreive().iterator();
-        while(it.hasNext()) {
+        // Loop through all the Documents inside the Collection
+        while (it.hasNext()) {
             Document doc = it.next();
-            mainpanel.add(new Card(cardX, cardY, new supplier(doc.get("pname").toString(), doc.get("pid").toString(), doc.get("purl").toString(), doc.get("pdesc").toString(), Double.parseDouble(doc.get("price").toString()), Integer.parseInt( doc.get("rating").toString()))));
-            cardX += 300;
+            // Create a supplier object with document data and add it to the mainpanel
+            mainpanel.add(new Card(cardX, cardY,
+                    new supplier(doc.get("pname").toString(), doc.get("pid").toString(), doc.get("purl").toString(),
+                            doc.get("pdesc").toString(), Double.parseDouble(doc.get("price").toString()),
+                            Integer.parseInt(doc.get("rating").toString()))));
+            cardX += 300; // Increase the X pos of Card
         }
         mainpanel.setLayout(null);
 
@@ -38,10 +49,15 @@ public class UI {
         frame.setVisible(true);
     }
 
+    // Create a Supplier and add that data to the Database
     public static void addProduct() {
-        //supplier s = new supplier("Corsair Vengeance RAM", "1234", "https://m.media-amazon.com/images/I/61-oIjWmtCL._SL1200_.jpg", "Corsair Vengeance LPX 16GB (1x16GB) DDR4 3600MHz C18 Desktop Memory Black", 7199, 5);
-        supplier s = new supplier("RAM", "123456", "https://m.media-amazon.com/images/I/61l4EStxhnL._SL1274_.jpg", "G.SKILL Trident Z RGB 32GB (2 * 16GB) DDR4 3200MHz CL16-18-18-38 1.35V Desktop Memory RAM - F4-3200C16D-32GTZR", 15037, 5);
-        
+        // supplier s = new supplier("Corsair Vengeance RAM", "1234",
+        // "https://m.media-amazon.com/images/I/61-oIjWmtCL._SL1200_.jpg", "Corsair
+        // Vengeance LPX 16GB (1x16GB) DDR4 3600MHz C18 Desktop Memory Black", 7199, 5);
+        supplier s = new supplier("RAM", "123456", "https://m.media-amazon.com/images/I/61l4EStxhnL._SL1274_.jpg",
+                "G.SKILL Trident Z RGB 32GB (2 * 16GB) DDR4 3200MHz CL16-18-18-38 1.35V Desktop Memory RAM - F4-3200C16D-32GTZR",
+                15037, 5);
+
         new Product().add(s);
     }
 }
