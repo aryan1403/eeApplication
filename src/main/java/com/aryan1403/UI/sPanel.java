@@ -67,11 +67,14 @@ public class sPanel extends JPanel {
         submit.setFont(new Font("Comic Sans", Font.BOLD, 20));
         submit.setLayout(null);
         submit.addActionListener(e -> {
+            // Creating a supplier Object
             supplier s = new supplier(pname.getText(), pid.getText(), purl.getText(), desc.getText(), Double.parseDouble(price.getText()), Integer.parseInt(rating.getSelectedItem().toString()));
+            // Adding that object to DB
             new Product().add(s);
+            // Adding a new Card for the Product
             UI.mainpanel.add(new Card(UI.cardX, UI.cardY, s));
-            UI.cardX += 200;
-            UI.frame.repaint();
+            UI.cardX += 200; // Increase X pos
+            UI.frame.repaint(); // Reapint the Frame
         });
 
         this.setBounds(0, 0, UI.frameX, UI.frameY);
