@@ -26,7 +26,7 @@ public class sPanel extends JPanel {
     public sPanel() {
         pname = new JTextField("Enter Product name");
         pname.setBounds(50, 50, 300, 40);
-        pname.setFont(new Font("Comic Sans", Font.PLAIN, 20));
+        pname.setFont(new Font("Comic Sans", Font.PLAIN, 16));
         pname.setLayout(null);
 
         rating = new JComboBox<>();
