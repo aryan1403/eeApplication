@@ -56,16 +56,4 @@ public class UI {
         frame.add(pane);
         frame.setVisible(true);
     }
-
-    // Create a Supplier and add that data to the Database
-    public static void addProduct() {
-        // supplier s = new supplier("Corsair Vengeance RAM", "1234",
-        // "https://m.media-amazon.com/images/I/61-oIjWmtCL._SL1200_.jpg", "Corsair
-        // Vengeance LPX 16GB (1x16GB) DDR4 3600MHz C18 Desktop Memory Black", 7199, 5);
-        supplier s = new supplier("RAM", "123456", "https://m.media-amazon.com/images/I/61l4EStxhnL._SL1274_.jpg",
-                "G.SKILL Trident Z RGB 32GB (2 * 16GB) DDR4 3200MHz CL16-18-18-38 1.35V Desktop Memory RAM - F4-3200C16D-32GTZR",
-                15037, 5);
-
-        new Product().add(s);
-    }
 }
