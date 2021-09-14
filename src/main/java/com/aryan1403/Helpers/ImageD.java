@@ -8,6 +8,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URL;
 
+// Get Image from URL & Save it as a jpg file
 public class ImageD {
     public void getImage(String u, String filename) {
         try {
@@ -16,10 +17,10 @@ public class ImageD {
             OutputStream out = new BufferedOutputStream(new FileOutputStream(filename+".jpg"));
 
             for (int i; (i = in.read()) != -1;) {
-                out.write(i);
+                out.write(i); // Write the response
             }
-            in.close();
-            out.close();
+            in.close();  // Close
+            out.close(); // Close
         } catch (IOException e) {
             e.printStackTrace();
         }
