@@ -40,22 +40,22 @@ public class sPanel extends JPanel {
 
         pid = new JTextField("Enter Product ID");
         pid.setBounds(50, 100, 300, 40);
-        pid.setFont(new Font("Comic Sans", Font.PLAIN, 20));
+        pid.setFont(new Font("Comic Sans", Font.PLAIN, 16));
         pid.setLayout(null);
 
         purl = new JTextField("Enter product URL");
         purl.setBounds(50, 150, 300, 40);
-        purl.setFont(new Font("Comic Sans", Font.PLAIN, 20));
+        purl.setFont(new Font("Comic Sans", Font.PLAIN, 16));
         purl.setLayout(null);
 
         price = new JTextField("Enter price");
         price.setBounds(370, 150, 300, 40);
-        price.setFont(new Font("Comic Sans", Font.PLAIN, 20));
+        price.setFont(new Font("Comic Sans", Font.PLAIN, 16));
         price.setLayout(null);
 
         desc = new JTextArea("Enter Product Descripion");
         desc.setBounds(50, 200, 300, 200);
-        desc.setFont(new Font("Comic Sans", Font.PLAIN, 20));
+        desc.setFont(new Font("Comic Sans", Font.PLAIN, 16));
         desc.setBorder(BorderFactory.createLineBorder(Color.black));
         desc.setLayout(null);        
 
@@ -64,7 +64,7 @@ public class sPanel extends JPanel {
         submit.setFocusable(false);
         submit.setBackground(Color.green);
         submit.setForeground(Color.white);
-        submit.setFont(new Font("Comic Sans", Font.BOLD, 20));
+        submit.setFont(new Font("Comic Sans", Font.BOLD, 16));
         submit.setLayout(null);
         submit.addActionListener(e -> {
             // Creating a supplier Object
