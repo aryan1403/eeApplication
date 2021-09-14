@@ -5,7 +5,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import com.aryan1403.DB.mongo;
-import com.aryan1403.Helpers.Product;
 import com.aryan1403.Merchandise.supplier;
 import org.bson.Document;
 
