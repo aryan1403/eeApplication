@@ -1,5 +1,5 @@
 # eeApplicatrion
-A simple Java Swing Merchandise Application xD
+A simple Java Swing Merchandise Application
 
 ## Language
   TodoDemo is made in Pure Java Swing ;)
